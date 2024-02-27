@@ -1,0 +1,59 @@
+.content{
+    background-color: white;
+    width: 1440px;
+    height: 700px;
+display: flex;
+}
+.contentText{
+    font-size: 35px;
+    font-weight: 700;
+    color: black;
+    padding: 180px 0 0 230px;
+    text-transform: uppercase;
+}
+.contentTextRed {
+    color:red;
+}
+.secondContentText{
+    padding: 20px 0 0 230px;
+    font-size: 20px;
+    
+}
+.secondContentText2{
+    font-weight: 900;
+    margin-top: 20px;
+}
+.zaebal{
+    margin-top: 20px;
+}
+span{
+    font-weight: 900;
+    
+}
+.photoFlag{
+    background-image: url(./Rectangle\ 104.png);
+    height: 725px;
+    width: 700px;
+}
+.secondPhoto {
+    background-image: url(./Евразийский\ патент\ на\ XL\ PIPE_ДЭУ\ 1.png);
+    width: 420px;
+    height: 500px;
+    position: absolute;
+}    
+.thirdPhoto{
+    background-image: url(./5637\ \(1\)-1\ 1.png);
+    width: 450px;
+    height: 550px;
+    position: relative;
+    margin: 150px 0 0 250px;
+}
+.Bolshe {
+    font-weight: 700;
+    margin: 80px 0 0 0 ;
+    text-decoration: none;
+    width: 150px;
+    border-bottom: 3px solid #E91609;
+    color: black;
+    
+}

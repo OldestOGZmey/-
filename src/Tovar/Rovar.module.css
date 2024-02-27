@@ -1,0 +1,81 @@
+.firstText{
+    color:black;
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 30px 0 60px 25px;
+}
+span{
+    color: #E91609;
+}
+
+.tovars{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.cartaTovara{
+    background-image: url(./product.png);
+    width: 433.33px;
+    height: 585px ;
+}
+.cartaBtn{
+    color:white;
+    width: 220px;
+    height: 40px;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: #E91609;
+    border: 1px solid #E91609;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+.firstText2{
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+}
+.firstTextOsob{
+    color: red;
+}
+.secondText{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+.raspolohCart{
+margin: 50px 84px 343px 84px;
+color: white;
+font-size:20px;
+}
+@media screen and ( max-width:1300px) {
+    .tovars{
+        flex-direction: column; 
+    }
+    .cartaTovara{
+        margin-bottom: 40px;
+    }
+    .firstText{
+        text-align: center;
+    }
+}
+.grayTextCart{
+    color: #FFFFFF99;
+}
+.glavSecondText {
+    font-size: 35px;
+    font-weight: 700;
+    padding: 30px 0 60px 25px;
+}
+.title{
+font-size:22px;
+font-weight: 300;
+color: #252525;
+
+}
+.tire{
+color: #E91609;
+
+font-size: 50px;
+}
