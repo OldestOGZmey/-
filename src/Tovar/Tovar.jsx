@@ -3,7 +3,7 @@ import s from './Rovar.module.css'
 const Tovar = () => {
 return (
     <div className={s.tovar}>
-    <div className={s.firstText}><span>Необходимые вложения</span> на старте</div>
+    <div className={s.firstText}><span className={s.name}>Необходимые вложения</span> на старте</div>
     <div className={s.tovars}>
         <div className={s.cartaTovara}>
             <div className={s.raspolohCart}>
@@ -62,11 +62,11 @@ return (
         <div className={s.glavSecondText}>
         Помимо приобретения пакета, вам необходимы
         </div>
-        <div>
-            <div className={s.Title}><span className={s.tire}>-</span> Офис продаж от 25 кв.м </div>
-            <div className={s.Title}><span className={s.tire}>-</span> Косметический ремонт в офисе</div>
-            <div className={s.Title}><span className={s.tire}>-</span> Организация рабочих мест</div>
-            <div className={s.Title}><span className={s.tire}>-</span> Рекламный бюджет на 1-2 месяца</div>
+        <div className={s.Okey}>
+            <div className={s.Title}><span className={s.tire}>.</span> Офис продаж от 25 кв.м </div>
+            <div className={s.Title}><span className={s.tire}>.</span> Косметический ремонт в офисе</div>
+            <div className={s.Title}><span className={s.tire}>.</span> Организация рабочих мест</div>
+            <div className={s.Title}><span className={s.tire}>.</span> Рекламный бюджет на 1-2 месяца</div>
         </div>
     </div>
     </div>

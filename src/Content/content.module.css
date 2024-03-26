@@ -1,7 +1,7 @@
 .content{
     background-color: white;
     width: 1440px;
-    height: 700px;
+    height: 900px;
 display: flex;
 }
 .contentText{
@@ -52,8 +52,40 @@ span{
     font-weight: 700;
     margin: 80px 0 0 0 ;
     text-decoration: none;
-    width: 150px;
+    width: 178px;
     border-bottom: 3px solid #E91609;
     color: black;
     
+}
+@media screen and (max-width: 400px) {
+    .content{
+        width: 400px;
+        height: 1000px;
+        
+    }
+    .contentText{
+        font-size: 20px;
+        padding: 50px 0 0 100px;
+    }
+    .secondContentText{
+        font-size: 12px;
+        padding: 50px 0 0 100px;
+    }
+    .photoFlag{
+    background-image: url(./Rectangle\ 104.png);
+    height: 0;
+    width: 0;
+    }
+    .secondPhoto {
+        background-image: url(./Евразийский\ патент\ на\ XL\ PIPE_ДЭУ\ 1.png);
+        width: 0;
+        height: 0;
+        
+    }    
+    .thirdPhoto{
+        background-image: url(./5637\ \(1\)-1\ 1.png);
+        width: 0;
+        height: 0;
+        
+    }
 }

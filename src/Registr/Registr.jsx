@@ -23,12 +23,11 @@ const Register = () => {
         const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         if (!re.test(String(e.target.value).toLowerCase())) {
             setEmailError(' Неккоректная почта')
-
         } else {
             setEmailError('')
         }
     }
-
+    
     const passwordHandler = (e) => {
         setPassword(e.target.value)
         if (e.target.value.length < 3 || e.target.value.length > 16) {
@@ -57,6 +56,7 @@ const Register = () => {
 
 
     return ( 
+    
         <div className={s.container}>
         <div className={s.text}>
         <div className={s.contentText}>
@@ -73,7 +73,7 @@ const Register = () => {
         <input onChange={e => emailHandler(e)} value={email} onBlur={e => blurHandle(e)} name="email" type="text" placeholder="Введите вашу почту" className={s.nameInput}/>
 
 
-        {(passwordDirty && passwordError) && <div style={{color: "red", margin: '15px 0 0 0'}}>{passwordError}</div>}
+        {(passwordDirty && passwordError) && <div style={{color: "red", margin: '10px 0 0 0'}}>{passwordError}</div>}
         <input onChange={e => passwordHandler(e)} value={password} onBlur={e => blurHandle(e)} name="password" type="password" placeholder="Введите ваш пароль" className={s.phoneInput}/>
 
 

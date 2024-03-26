@@ -7,7 +7,7 @@ return (
         <div className={s.postContent}>
         <strong>{props.number}. {props.post.title}</strong>
         <div>
-            {props.post.body}
+            {props.post.body} рублей
         </div>
         </div>
         <div className={s.postBtn}>

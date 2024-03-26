@@ -1,21 +1,21 @@
 import React from "react";
 import s from './Header.module.css'
-import Content from "../Content/content";
+
 const Header = () => {
     return (  
         <div className={s.mainHeader}>
         <div className={s.header}>
         <div className={s.headerLogo}></div>
-        <nav className={s.headerNav}>
+        <div className={s.headerNav}>
         <div className={s.headerNavText}>Интернет-магазин</div>
         <div className={s.headerNavText}>Отзывы</div>
         <div className={s.headerNavText}>Новинка</div>
         <div className={s.headerNavText}>Корзина</div>
         <div className={s.headerNavText}>Блог</div>
-        </nav>
+        </div>
         <div className={s.headerDop}>
             <div className={s.headerPhone}>
-            +7 (913) 205-06-13
+            +7(913)205-06-13
             </div>
             
             <button className={s.headerPhonCall}>Заказать звонок</button>

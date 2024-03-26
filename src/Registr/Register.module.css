@@ -5,9 +5,35 @@
     color: white;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 150px;
+    margin-bottom: 200px;
     
 }
+
+
+@media  screen and (max-width: 2560px) {
+    .container {margin-top: 300px ;
+    height: 508px;
+    }
+}
+@media  screen and (max-width: 400px) {
+    .container {
+    margin-top: 40px ;
+    height: 650px;
+    width: 500px;
+    background-color: black;
+    background-image: none;
+    border-radius: 30px;
+    
+    }
+    .footerText{
+        padding-right: 200px;
+    }
+    .contentText2{
+    margin-left: 13px;
+    }
+}
+
+
 .text {
     padding-top: 50px;
 }
@@ -32,7 +58,7 @@ justify-content: center;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top:30px;
+    padding-top:15px;
 
 }
 .nameInput {

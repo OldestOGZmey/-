@@ -1,0 +1,80 @@
+
+.joc{
+    font-weight: 700;
+    font-size: 30px;
+    padding: 150px 10px 0 20px;
+    text-align: center;
+}
+
+.final{
+    background-image: url(./popup\ bg\ \(1\).png);
+    width: 1100px;
+    height: 553px;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 150px;
+    border-radius: 30px;
+    display: flex;
+}
+
+input{
+    background-color: #252525;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-top: 20px;
+    width: 380px;
+    height: 45px;
+    font-size: 22px;
+    font-weight: 300;
+    color: rgb(190, 190, 190);
+    padding: 0 0 0 10px;
+}
+.ok{
+    padding-top: 100px;
+    margin-left: 180px;
+}
+.rete{
+    background-color: #C62606;
+    color: white;
+    border: 1px solid #C62606;
+    border-radius: 10px;
+    width: 380px;
+    height: 45px;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 20px;
+    
+}
+.rete{
+    border: 2px solid white;
+    cursor: pointer;
+    
+}
+
+.rete:hover{
+    color: black;
+    background-color: black;
+    transition: 5s;
+    width: 80px;
+    height: 80px;
+    margin-left:140px;
+    font-size: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 28px;
+    padding-top: 5px;
+    border: 1px solid black;
+}
+
+span{
+    color: #C62606;
+    margin-bottom:20px ;
+    font-size: 20px;
+    
+}
+
+
