@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Loader from '../Oplata/UI/Loader/Loader'
 import s from './Rovar.module.css'
 const Tovar = () => {
 return (
@@ -15,7 +17,7 @@ return (
                 <div>- скидка на продукцию до 45%</div>
                 </div>
             <div>
-            <a href="/oplata"><button className={s.cartaBtn}>Выбрать пакет</button></a>
+            <Link to="/oplata"><button className={s.cartaBtn}>Выбрать пакет</button></Link>
             </div>
             </div>
         </div>
@@ -33,7 +35,7 @@ return (
                 <div>- печатные рекламные материалы (БЕСПЛАТНО)</div> 
                 <div>- демонстрационный стенд с образцами</div>
             <div>
-            <a href="/oplata"><button className={s.cartaBtn}>Выбрать пакет</button></a>
+            <Link to="/oplata"><button className={s.cartaBtn}>Выбрать пакет</button></Link>
             </div>
             </div>
         </div>
@@ -53,7 +55,7 @@ return (
                 <div>- бонус на размещение онлайн рекламы </div>
                 </div>
             <div>
-            <a href="/oplata"><button className={s.cartaBtn}>Выбрать пакет</button></a>
+            <Link to="/oplata"><button className={s.cartaBtn}>Выбрать пакет</button></Link>
             </div>
             </div>
         </div>

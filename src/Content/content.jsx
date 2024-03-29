@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import s from './content.module.css'
 
 
@@ -15,7 +16,7 @@ return (
     <div>Электро-водяной пол <span>XL PIPE</span></div>
     <div className={s.zaebal}>Это выгодная и более экологичная альтернатива <div>стандартным системам отопления – твердотопливным,</div> электрическим и газовым котлам. </div>
     <div className={s.secondContentText2}>Быстрый монтаж, легкая эксплуатация и надежное <div>корейское качество!</div></div>
-    <a href='/tovar'><div className={s.Bolshe}>Купить XL PIPE</div></a>
+    <Link to='/tovar'><div className={s.Bolshe}>Купить XL PIPE</div></Link>
     </div>
     </div>
     <div className={s.photoFlag}> 

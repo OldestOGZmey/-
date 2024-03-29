@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import s from './Header.module.css'
 
 const Header = () => {
@@ -35,7 +36,7 @@ const Header = () => {
             <div className={s.contentSecondText2}>- Проверенная бизнес-модель с 2010 года </div>
             <div className={s.contentSecondText2}>- Работает более <span className={s.textOsob}>80 партнеров</span> по России и СНГ</div>
             <div className={s.sdf}>
-            <a href="/content"><button className={s.contentBTN}>ПОЛУЧИТЬ ПРЕЗЕНТАЦИЮ + БИЗНЕС-ПЛАН</button></a>
+            <Link to="/content"><button className={s.contentBTN}>ПОЛУЧИТЬ ПРЕЗЕНТАЦИЮ + БИЗНЕС-ПЛАН</button></Link>
             </div>
             </div>
             

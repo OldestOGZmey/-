@@ -53,7 +53,7 @@ input{
     
 }
 
-.rete:hover{
+.rete:focus{
     color: black;
     background-color: black;
     transition: 5s;
@@ -76,5 +76,9 @@ span{
     font-size: 20px;
     
 }
-
+.reter{
+    font-size: 22px;
+    
+    color: aliceblue;
+}
 

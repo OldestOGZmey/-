@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./Register.module.css"
 import { useState, useEffect  } from "react";
+import { Link } from "react-router-dom";
 const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -79,7 +80,7 @@ const Register = () => {
 
 
 
-        <a href="/header"><button disabled={!formValid} type="submit" className={s.button}>Отправить заявку</button></a>
+        <Link to="/header"><button disabled={!formValid} type="submit" className={s.button}>Отправить заявку</button></Link>
         </div>
         <div className={s.footerText}>
             Отправляя заявку, вы соглашаетесь на обработку персональных <div>данных в соответствии с <span className={s.specialFooterText}>политикой конфиденциальности</span></div>

@@ -4,32 +4,45 @@ import s from './Oplata.module.css'
 import PostForm from './PostForm'
 import PostList from './PostList'
 import MyButton from './UI/MyButton'
-import axios from 'axios'
 import MyInput from './UI/MyInput'
 import MyModal from './UI/MyModal/MyModal'
 import MySelect from './UI/MySelect'
+import Loader from './UI/Loader/Loader'
+import PostService from './Api/PostServer'
+import { useFetching } from './Api/useFetcing'
+import { getPageCount, getPagesArray } from '../utils/pages'
 const Oplata = () => {
+    
 
+    
+    
+    let pagesArray = getPagesArray(11);
+    
     const [posts, setPosts] = useState([
     
     ])
-    const [isPostsLoading, setIsPostsLoading] = useState(false)
+    const [totalPages, setTotalPages] = useState(0)
+    const [limit, setLimit] = useState(10)
+    const [page, setPage] = useState(1)
     
-    async function fetchPosts() {
-        setIsPostsLoading(true)
-        setTimeout( async() => {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
+    const [fetchPosts, isPostsLoading, postError] = useFetching(async(event) => {
+
+        const response = await PostService.getAll(limit, page);
         setPosts(response.data)
-        setIsPostsLoading(false)
-        }, 2300
-        )
+        const totalCount = response.headers['x-total-count']
+        setTotalPages(getPageCount(totalCount, limit))
+        event.preventDefault();
         
-    }
+        
+        
+    })
+    
     
     useEffect(() => {
+        
         fetchPosts()
         
-    }, []);
+    }, [page]);
 
 const [searchQuary, setSearchQuary] = useState('')
 
@@ -53,13 +66,20 @@ const sortedPosts = useMemo(() => {
         const sortPosts = (sort) => {
         setSelectedSort(sort)
         
-}
+} 
 
 const [modal , setModal] = useState(false)
 
 const sortedAndSearchedPosts = useMemo(() => {
         return sortedPosts.filter(post => post.title.toLowerCase().includes(searchQuary))
+        
 }, [searchQuary, sortedPosts])
+
+
+const changePage = (page) => {
+    setPage(page)
+}
+
 
 return (
     
@@ -77,7 +97,6 @@ return (
 
     <hr style={{margin: '15px 0'}}/>
     <div>
-   
     <MyInput
         value={searchQuary.toLowerCase()}
         onChange={e => setSearchQuary(e.target.value)}
@@ -95,13 +114,32 @@ return (
         />
         
     </div>
+            {postError && 
+            <h1>Произошла ошибка ${postError}<Loader/></h1>
+
+            }
             
 
-            {isPostsLoading
-                ? <h1> Идет загрузка...</h1>
-                : <PostList posts={sortedAndSearchedPosts} title='Выберите интересующее вас приложение или добавьте новое'/>
+            {
+                isPostsLoading
+            
+                ?  <div style={{display:'flex', justifyContent: 'center', marginTop: '200px', marginBottom: '2000px'}}><Loader/></div>
+                :<PostList posts={sortedAndSearchedPosts} title='Выберите интересующее вас приложение или добавьте новое'/>
             }
+            <div className={s.page__wrapper}>
+            {pagesArray.map(p => 
+            <span 
+            className={page === p ?  s.page__current : s.page}
+            onClick={() => changePage(p)}
+            key={p + 1}
+            >
+                {p}
+            </span>
+            
+            )}
+            </div>
     </div>
+    
     
     </div>
 )

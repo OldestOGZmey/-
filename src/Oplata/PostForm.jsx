@@ -29,7 +29,7 @@ return (
         />
         <MyInput
         type='text' 
-        placeholder='Цена'
+        placeholder='Описание'
         value={post.body}
         onChange={e => setPost({...post, body: e.target.value})}
         />
