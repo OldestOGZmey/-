@@ -2,6 +2,7 @@ import React from "react";
 import s from "./Register.module.css"
 import { useState, useEffect  } from "react";
 import { Link } from "react-router-dom";
+import { EyeInvisibleOutlined, EyeOutlined } from "@ant-design/icons";
 const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -53,12 +54,12 @@ const Register = () => {
     }
     }
 
-
-
+    const [visible, setVisible] = useState(false)
 
     return ( 
     
         <div className={s.container}>
+        
         <div className={s.text}>
         <div className={s.contentText}>
         Заполните форму
@@ -74,13 +75,18 @@ const Register = () => {
         <input onChange={e => emailHandler(e)} value={email} onBlur={e => blurHandle(e)} name="email" type="text" placeholder="Введите вашу почту" className={s.nameInput}/>
 
 
+        
         {(passwordDirty && passwordError) && <div style={{color: "red", margin: '10px 0 0 0'}}>{passwordError}</div>}
-        <input onChange={e => passwordHandler(e)} value={password} onBlur={e => blurHandle(e)} name="password" type="password" placeholder="Введите ваш пароль" className={s.phoneInput}/>
+        <div className={s.vesibleChild}>
+        <input onChange={e => passwordHandler(e)} value={password} onBlur={e => blurHandle(e)} id='ret' name="password" type={visible ? "text" : "password"} placeholder="Введите ваш пароль" className={s.phoneInput}/>
+        <div className={s.visible} onClick={() => setVisible(!visible)}>
+            {visible ? <EyeOutlined/> : <EyeInvisibleOutlined/>}
+        </div>
+        </div>
 
 
 
-
-        <Link to="/header"><button disabled={!formValid} type="submit" className={s.button}>Отправить заявку</button></Link>
+        <Link to="/header"><button disabled={!formValid} type="submit" className={s.button}>Войти</button></Link>
         </div>
         <div className={s.footerText}>
             Отправляя заявку, вы соглашаетесь на обработку персональных <div>данных в соответствии с <span className={s.specialFooterText}>политикой конфиденциальности</span></div>

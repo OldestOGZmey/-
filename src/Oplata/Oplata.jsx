@@ -11,12 +11,13 @@ import Loader from './UI/Loader/Loader'
 import PostService from './Api/PostServer'
 import { useFetching } from './Api/useFetcing'
 import { getPageCount, getPagesArray } from '../utils/pages'
+
 const Oplata = () => {
     
 
     
     
-    let pagesArray = getPagesArray(11);
+    
     
     const [posts, setPosts] = useState([
     
@@ -25,13 +26,12 @@ const Oplata = () => {
     const [limit, setLimit] = useState(10)
     const [page, setPage] = useState(1)
     
-    const [fetchPosts, isPostsLoading, postError] = useFetching(async(event) => {
+    const [fetchPosts, isPostsLoading, postError] = useFetching(async(limit, page) => {
 
         const response = await PostService.getAll(limit, page);
         setPosts(response.data)
         const totalCount = response.headers['x-total-count']
         setTotalPages(getPageCount(totalCount, limit))
-        event.preventDefault();
         
         
         
@@ -40,9 +40,9 @@ const Oplata = () => {
     
     useEffect(() => {
         
-        fetchPosts()
+        fetchPosts(limit, page)
         
-    }, [page]);
+    }, []);
 
 const [searchQuary, setSearchQuary] = useState('')
 
@@ -78,7 +78,12 @@ const sortedAndSearchedPosts = useMemo(() => {
 
 const changePage = (page) => {
     setPage(page)
+    fetchPosts(limit,page)
 }
+
+let pagesArray = getPagesArray(totalPages);
+
+
 
 
 return (

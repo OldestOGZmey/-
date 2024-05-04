@@ -11,7 +11,8 @@
 
 
 @media  screen and (max-width: 2560px) {
-    .container {margin-top: 300px ;
+    .container {
+    margin-top: 300px;
     height: 508px;
     }
 }
@@ -23,7 +24,6 @@
     background-color: black;
     background-image: none;
     border-radius: 30px;
-    
     }
     .footerText{
         padding-right: 200px;
@@ -35,7 +35,7 @@
 
 
 .text {
-    padding-top: 50px;
+    padding-top: 30px;
 }
 .contentText {
 font-size: 30px;
@@ -96,7 +96,7 @@ width: 380px;
 height: 45px;
 font-size: 22px;
 font-weight: 700;
-margin-top: 20px;
+margin-top: 5px;
 }
 .footerText {
     font-size: 15px;
@@ -107,4 +107,15 @@ margin-top: 20px;
 }
 .specialFooterText {
     color: #C62606;
+}
+.visible{
+padding-top: 40px;
+    margin-left: 20px;
+}
+.vesibleChild{
+    width: 380px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    
 }

@@ -38,7 +38,7 @@
     background-color: #E91609;
     border: 1px solid #E91609;
     border-radius: 20px;
-    
+    margin-left: 10px;
 }
 .d{
     background: radial-gradient(circle, rgba(133,12,12,1) 95%, rgba(255,255,255,1) 100%);

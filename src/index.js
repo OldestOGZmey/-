@@ -8,6 +8,7 @@ import Register from './Registr/Registr';
 import Tovar from './Tovar/Tovar';
 import Oplata from './Oplata/Oplata';
 import Final from './Final/Final';
+import PostIdPage from './Oplata/Pages/PostIdPage';
 const router = createBrowserRouter([
 
 
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: '/final',
     element: <Final/>
+  },
+  {
+    path : '/oplata/:id',
+    element: <PostIdPage/>
   }
 
 

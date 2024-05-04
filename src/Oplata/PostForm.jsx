@@ -5,16 +5,16 @@ import { useState } from 'react'
 
 const PostForm = ({create}) => {
 
-    const [post, setPost] = useState({title: '', body: ''})
+    const [post, setPost] = useState({title: '', body: '', id: ''})
 
 
     const addNewPost = (e) => {
         e.preventDefault();
         const newPost = {
-            ...post, id: Date.now()
+            ...post, id: 100 + 1
         }
         create(newPost)
-        setPost({title: '', body: ''})
+        setPost({title: '', body: '', id: ''})
         
     }
 
